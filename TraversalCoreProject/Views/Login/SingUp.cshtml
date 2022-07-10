@@ -1,0 +1,83 @@
+﻿@model TraversalCoreProject.Models.UserRegisterViewModel 
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Traversal Misafir Kayıt Ekranı</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS only -->
+
+    <!-- BOOTSTRAP -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"  crossorigin="anonymous">
+
+   <!-- LINEARICONS -->
+    <link rel="stylesheet" href="/colorlib-regform-26/fonts/linearicons/style.css">
+
+    <!-- STYLE CSS -->
+    <link rel="stylesheet" href="/colorlib-regform-26/css/style.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+        <div class="inner">
+            <img src="/colorlib-regform-26/images/image-1.png" alt="" class="image-1">
+            <form method="post">
+                <h3>Yeni Hesap Oluşturun</h3>
+                <div class="form-holder">
+                    <label class="lnr lnr-user"></label>
+                    <input type="text" class="form-control" placeholder="Adınız" name="Name" asp-for="Name" >
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-holder">
+                    <label class="lnr lnr-user"></label>
+                    <input type="text" class="form-control" placeholder="Soyadınız" name="Surname" asp-for="Surname">
+                    <span asp-validation-for="Surname" class="text-danger"></span>
+                </div>
+                <div class="form-holder">
+                    <label class="lnr lnr-envelope"></label>
+                    <input type="text" class="form-control" placeholder="Mail Adresiniz" name="Mail" asp-for="Mail">
+                    <span asp-validation-for="Mail" class="text-danger"></span>
+                </div>
+                <div class="form-holder">
+                    <label class="lnr lnr-phone-handset"></label>
+                    <input type="text" class="form-control" placeholder="Kullanıcı Adınız" name="userName" asp-for="userName">
+                    <span asp-validation-for="userName" class="text-danger"></span>
+                </div>
+                <div class="form-holder">
+                    <label class="lnr lnr-lock"></label>
+                    <input type="password" class="form-control" placeholder="Şifreniz" name="Password" asp-for="Password">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-holder">
+                    <label class="lnr lnr-lock"></label>
+                    <input type="password" class="form-control" placeholder="Şifre Tekrar" name="ConfirmPassword" asp-for="ConfirmPassword">
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+                <div class="text-danger" asp-validation-summary="ModelOnly">
+
+                </div>
+                <button>
+                    <span>Kayıt Ol</span>
+                </button>
+                 <a href="/Login/SingIn">
+                <p class="alert alert-success text-center "> 
+
+                    <span>Giriş Yap</span></p>
+                </a>
+            </form>
+            <img src="/colorlib-regform-26/images/image-2.png" alt="" class="image-2">
+        </div>
+
+    </div>
+
+    <script src="/colorlib-regform-26/js/jquery-3.3.1.min.js"></script>
+    <script src="/colorlib-regform-26/js/main.js"></script>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"  crossorigin="anonymous"></script>
+</body>
+</html>
